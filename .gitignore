@@ -4,3 +4,4 @@ tweets
 *.html
 *.png
 *.xml
+venv
