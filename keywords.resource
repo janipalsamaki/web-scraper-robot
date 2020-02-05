@@ -25,7 +25,7 @@ Store tweets
         Exit For Loop If            ${index} > ${number_of_tweets}
         ${screenshot_file}=         Set Variable    ${tweet_directory}/tweet-${index}.png
         ${text_file}=               Set Variable    ${tweet_directory}/tweet-${index}.txt
-        ${text}=                    Set Variable    ${tweet.find_element_by_class_name('tweet-text').text}
+        ${text}=                    Set Variable    ${tweet.find_element_by_xpath(".//div[@lang='en']").text}
         Capture Element Screenshot  ${tweet}        ${screenshot_file}
         Create File                 ${text_file}    ${text}
         ${index}=                   Evaluate        ${index} + 1
@@ -33,7 +33,7 @@ Store tweets
 
 Get tweets locator
     [Arguments]     ${user_name}
-    [Return]        xpath://div[@data-screen-name="${user_name}" and contains(@class, "tweet")]
+    [Return]        xpath://article[descendant::span[contains(text(), "\@${user_name}")]]
 
 Get tweet directory
     [Arguments]     ${user_name}
