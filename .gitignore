@@ -4,4 +4,5 @@ tweets
 *.html
 *.png
 *.xml
+output
 venv
