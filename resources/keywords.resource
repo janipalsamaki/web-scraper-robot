@@ -37,4 +37,4 @@ Get tweets locator
 
 Get tweet directory
     [Arguments]     ${user_name}
-    [Return]        ${CURDIR}/tweets/${user_name}
+    [Return]        ${CURDIR}/../tweets/${user_name}
