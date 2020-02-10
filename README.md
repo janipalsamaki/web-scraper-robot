@@ -18,7 +18,7 @@ When run, the robot will:
 
 ## Prerequisites
 
-> To complete this tutorial, you need to have [Chrome](https://www.google.com/chrome/) installed. You also need a working [Python](https://www.python.org/) installation. On macOS / Linux, you can open the terminal and try running `python3 --version` to check if you have the required Python installed. On Windows, you can open the command prompt and try running `py --version` to check if you have the required Python installed.
+> To complete this tutorial, you need to have [Chrome](https://www.google.com/chrome/) installed. You also need a working [Python](https://www.python.org/) (version 3) installation. On macOS / Linux, you can open the terminal and try running `python3 --version` to check if you have the required Python installed. On Windows, you can open the command prompt and try running `py --version` to check if you have the required Python installed.
 
 You will start by creating some setup files and scripts to aid with setting up and executing your robot. The scripts will also help other people who want to use your robot to get everything up and running easily.
 
