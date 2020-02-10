@@ -2,7 +2,6 @@
 __pycache__
 tweets
 *.html
-*.png
 *.xml
 output
 venv
