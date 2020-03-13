@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation   Web scraper robot. Stores tweets.
-Resource        keywords.resource
+Resource        keywords.robot
 Variables       variables.py
 
 *** Tasks ***

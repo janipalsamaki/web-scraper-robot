@@ -187,7 +187,7 @@ Paste the following Robot Framework code in the `web-scraper-robot.robot` file:
 ```robot
 *** Settings ***
 Documentation   Web scraper robot. Stores tweets.
-Resource        keywords.resource
+Resource        keywords.robot
 Variables       variables.py
 
 *** Tasks ***
@@ -199,9 +199,9 @@ Store the latest tweets by given user name
 
 Inside the `web-scraper-robot` directory, create a directory by name `resources`.
 
-Inside the `resources` directory, create a file by name `keywords.resource`.
+Inside the `resources` directory, create a file by name `keywords.robot`.
 
-Paste the following Robot Framework code in the `keywords.resource` file:
+Paste the following Robot Framework code in the `keywords.robot` file:
 
 ```robot
 *** Settings ***
@@ -269,7 +269,7 @@ Your directory structure should look like this:
 web-scraper-robot
 ├── requirements.txt
 ├── resources
-│   └── keywords.resource
+│   └── keywords.robot
 ├── scripts
 │   ├── prepare.sh (or prepare.bat)
 │   └── run.sh (or run.bat)
@@ -319,7 +319,7 @@ The robot should have created a directory `tweets/robotframework` containing ima
 ```robot
 *** Settings ***
 Documentation   Web scraper robot. Stores tweets.
-Resource        keywords.resource
+Resource        keywords.robot
 Variables       variables.py
 
 *** Tasks ***
@@ -339,11 +339,11 @@ The main robot file (`.robot`) contains the task(s) your robot is going to compl
 
 `Store the latest tweets by given user name` is the name of the task.
 
-`Store the latest ${NUMBER_OF_TWEETS} tweets by user name "${USER_NAME}"` is a keyword call. The keyword is imported from the `keywords.resource` file where it is implemented.
+`Store the latest ${NUMBER_OF_TWEETS} tweets by user name "${USER_NAME}"` is a keyword call. The keyword is imported from the `keywords.robot` file where it is implemented.
 
 `${NUMBER_OF_TWEETS}` and `${USER_NAME}` are references to variables defined in the `variables.py` file.
 
-### `keywords.resource`
+### `keywords.robot`
 
 #### Settings section
 
@@ -574,7 +574,7 @@ During the process, you learned some concepts and features of the Robot Framewor
 - [x] Documenting scripts (`Documentation`)
 - [x] Importing libraries (`OperatingSystem, SeleniumLibrary`)
 - [x] Using keywords provided by libraries (`Open Browser`)
-- [x] Splitting robot script to multiple files (`*.py`, `*.resource`, `*.robot`)
+- [x] Splitting robot script to multiple files (`*.py`, `*.robot`)
 - [x] Creating your own keywords
 - [x] Defining arguments (`[Arguments]`)
 - [x] Calling keywords with arguments
