@@ -1,7 +1,0 @@
-.DS_Store
-__pycache__
-tweets
-*.html
-*.xml
-output
-venv
