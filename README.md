@@ -18,7 +18,7 @@ When run, the robot will:
 
 ## Prerequisites
 
-> To complete this tutorial, you need to have [Chrome](https://www.google.com/chrome/) installed. You also need a working [Python](https://www.python.org/) (version 3) installation. On macOS / Linux, you can open the terminal and try running `python3 --version` to check if you have the required Python installed. On Windows, you can open the command prompt and try running `py --version` to check if you have the required Python installed.
+> To complete this tutorial, you need a working [Python](https://www.python.org/) (version 3) installation. On macOS / Linux, you can open the terminal and try running `python3 --version` to check if you have the required Python installed. On Windows, you can open the command prompt and try running `py --version` to check if you have the required Python installed.
 
 ## Create a directory for your software robot projects
 
@@ -110,7 +110,7 @@ Store the latest ${number_of_tweets} tweets by user name "${user_name}"
 
 Open Twitter homepage
     [Arguments]             ${user_name}
-    Open Chrome Browser     ${TWITTER_URL}/${user_name}
+    Open Available Browser  ${TWITTER_URL}/${user_name}
 
 Store tweets
     [Arguments]                     ${user_name}            ${number_of_tweets}
@@ -255,7 +255,7 @@ Keywords can call other keywords.
 ```robot
 Open Twitter homepage
     [Arguments]             ${user_name}
-    Open Chrome Browser     ${TWITTER_URL}/${user_name}
+    Open Available Browser  ${TWITTER_URL}/${user_name}
 ```
 
 `Open Twitter homepage` is one of your keywords. It is not provided by any external library. You can define as many keywords as you need. Your keywords can call other keywords, both your own and keywords provided by libraries.
@@ -267,10 +267,10 @@ Open Twitter homepage
 `[Arguments]` line should be read from left to right. `[Arguments]` line tells Robot Framework the names of the arguments this keyword expects. In this case, there is one argument: `${user_name}`.
 
 ```robot
-    Open Chrome Browser     ${TWITTER_URL}/${user_name}
+    Open Available Browser  ${TWITTER_URL}/${user_name}
 ```
 
-`Open Chrome Browser` is a keyword provided by the `RPA.Browser` library. In this case, you call it with one argument: the URL (`https://twitter.com/robotframework`).
+`Open Available Browser` is a keyword provided by the `RPA.Browser` library. In this case, you call it with one argument: the URL (`https://twitter.com/robotframework`).
 
 The arguments here reference both a variable (`${TWITTER_URL}`, defined in `variables.py`) and an argument (`${user_name}`, provided when calling your keyword).
 
@@ -414,7 +414,7 @@ During the process, you learned some concepts and features of the Robot Framewor
 - Defining `Settings` for your script (`*** Settings ***`)
 - Documenting scripts (`Documentation`)
 - Importing libraries (`OperatingSystem, RPA.Browser`)
-- Using keywords provided by libraries (`Open Chrome Browser`)
+- Using keywords provided by libraries (`Open Available Browser`)
 - Splitting robot script to multiple files (`*.py`, `*.robot`)
 - Creating your own keywords
 - Defining arguments (`[Arguments]`)
